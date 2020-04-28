@@ -17,7 +17,7 @@
 package ai.deepsense.workflowexecutor.rabbitmq
 
 import akka.actor.ActorRef
-import com.thenewmotion.akka.rabbitmq.{Channel, ChannelMessage}
+import com.newmotion.akka.rabbitmq.{Channel, ChannelMessage}
 
 import ai.deepsense.commons.utils.Logging
 import ai.deepsense.workflowexecutor.communication.mq.MQSerializer

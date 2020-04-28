@@ -22,7 +22,7 @@ ADD uaa.yml /opt/uaa/
 # Add messages.properties with new information for activation email
 # H2 is needed in /opt/ since SQL script use it.
 RUN mkdir -p /opt/WEB-INF/lib/ && \
-    wget http://repo2.maven.org/maven2/com/h2database/h2/${H2_VERSION}/h2-${H2_VERSION}.jar \
+    wget https://repo1.maven.org/maven2/com/h2database/h2/${H2_VERSION}/h2-${H2_VERSION}.jar \
         -O /opt/WEB-INF/lib/h2-${H2_VERSION}.jar && \
     cp /opt/WEB-INF/lib/h2-${H2_VERSION}.jar /opt/ && \
     cd /opt/ && zip -r /tomcat/webapps/ROOT.war WEB-INF/ && \

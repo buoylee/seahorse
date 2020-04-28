@@ -23,8 +23,8 @@ import scala.concurrent.duration._
 import scala.concurrent.{Future, Promise}
 
 import akka.actor.{ActorRef, ActorSystem, PoisonPill, Props}
-import com.thenewmotion.akka.rabbitmq.ChannelActor.{Connected, Disconnected}
-import com.thenewmotion.akka.rabbitmq._
+import com.newmotion.akka.rabbitmq.ChannelActor.{Connected, Disconnected}
+import com.newmotion.akka.rabbitmq._
 
 import ai.deepsense.commons.utils.Logging
 import ai.deepsense.workflowexecutor.communication.mq.{MQCommunication, MQDeserializer, MQSerializer}
@@ -140,7 +140,7 @@ object MQCommunicationFactory {
    * As the documentation says, to synchronously create a channel one have to call createChannel
    * method.
    * {{{
-   *   import com.thenewmotion.akka.rabbitmq.reachConnectionActor
+   *   import com.newmotion.akka.rabbitmq.reachConnectionActor
    *   val channelActor: ActorRef = connectionActor.createChannel(ChannelActor.props())
    * }}}
    *

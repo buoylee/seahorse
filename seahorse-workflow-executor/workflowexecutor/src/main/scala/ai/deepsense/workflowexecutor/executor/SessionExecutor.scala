@@ -24,7 +24,7 @@ import scala.language.postfixOps
 import akka.actor.{ActorRef, ActorSystem, Props}
 import akka.routing._
 import com.rabbitmq.client.ConnectionFactory
-import com.thenewmotion.akka.rabbitmq._
+import com.newmotion.akka.rabbitmq._
 import com.typesafe.config.ConfigFactory
 import org.apache.spark.SparkContext
 

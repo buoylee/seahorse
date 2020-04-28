@@ -22,7 +22,7 @@ import akka.actor.{ActorRef, ActorSystem}
 import com.google.inject.name.Named
 import com.google.inject.{AbstractModule, Provides, Singleton}
 import com.rabbitmq.client.ConnectionFactory
-import com.thenewmotion.akka.rabbitmq.ConnectionActor
+import com.newmotion.akka.rabbitmq.ConnectionActor
 
 import scala.concurrent.{ExecutionContext, Future}
 import scala.util.control.NonFatal

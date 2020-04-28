@@ -33,20 +33,21 @@ RUN wget -q -O - \
   && rm -rf $SPARK_HOME/lib/spark-examples*.jar
 
 # Install conda
-RUN wget -q -O /tmp/Miniconda2-4.3.27.1-Linux-x86_64.sh \
-    https://repo.continuum.io/miniconda/Miniconda2-4.3.27.1-Linux-x86_64.sh && \
-    bash /tmp/Miniconda2-4.3.27.1-Linux-x86_64.sh -f -b -p /opt/conda && \
-    rm /tmp/Miniconda2-4.3.27.1-Linux-x86_64.sh && \
+RUN wget -q -O /tmp/Miniconda2-latest-Linux-x86_64.sh \
+    https://repo.anaconda.com/miniconda/Miniconda2-latest-Linux-x86_64.sh && \
+    bash /tmp/Miniconda2-latest-Linux-x86_64.sh -f -b -p /opt/conda && \
+    rm /tmp/Miniconda2-latest-Linux-x86_64.sh && \
 # Install python packages
 # Install tornado in version 4.1
 # jupyter_client/ioloop/restarter.py (jupyter_client < 5.1) needs tornado in that version
     /opt/conda/bin/conda install --yes \
-    'tornado=4.1' 'ipykernel=4.3.1' 'jupyter_client=4.3.0' 'pandas=0.16*' 'matplotlib=1.4*' \
-    'scipy=0.15*' 'seaborn=0.6*' 'scikit-learn=0.16*' 'libgfortran=1' && \
+    'tornado' 'ipykernel' 'jupyter_client' 'pandas' 'matplotlib' \
+    'scipy' 'seaborn' 'scikit-learn' && \
+#    /opt/conda/bin/conda install -c anaconda libgfortran && \
 # Install r packages
     /opt/conda/bin/conda install --yes -c r r-essentials && \
-    /opt/conda/bin/conda install --yes -c r r-base='3.3.1 1' && \
-    /opt/conda/bin/conda install --yes -c r r-irkernel=0.7 && \
+    /opt/conda/bin/conda install --yes -c r r-base && \
+    /opt/conda/bin/conda install --yes -c r r-irkernel && \
     /opt/conda/bin/conda clean --all --yes
 
 

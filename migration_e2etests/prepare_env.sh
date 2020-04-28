@@ -36,7 +36,7 @@ GENERATE_EXAMPLES_PY="$PROJECT_ROOT/deployment/generate_examples/generate_workfl
 
 WORKFLOWMANAGER_URL=http://127.0.0.1:33321/v1/workflows
 H2_JAR=h2-1.4.193.jar
-H2_JAR_URL=http://repo2.maven.org/maven2/com/h2database/h2/1.4.193/$H2_JAR
+H2_JAR_URL=https://repo1.maven.org/maven2/com/h2database/h2/1.4.193/$H2_JAR
 H2_JDBC_URL=jdbc:h2:"$WORKDIR/h2-data/workflowmanager;DATABASE_TO_UPPER=false"
 H2_RUN_SCRIPT_CLASS=org.h2.tools.RunScript
 H2_SHELL_CLASS=org.h2.tools.Shell
