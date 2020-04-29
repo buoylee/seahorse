@@ -101,11 +101,11 @@ object Dependencies {
   import Library._
 
   val resolvers = Seq(
+    "central.maven.org" at "https://repo1.maven.org/maven2/",
     "typesafe.com" at "http://repo.typesafe.com/typesafe/repo/",
     "sonatype.org" at "https://oss.sonatype.org/content/repositories/releases",
     "spray.io"     at "http://repo.spray.io",
-    "The New Motion Public Repo" at "http://nexus.thenewmotion.com/content/groups/public/",
-    "central.maven.org" at "http://central.maven.org/maven2/"
+    "The New Motion Public Repo" at "http://nexus.thenewmotion.com/content/groups/public/"
   )
 
   class Spark(version: String) {

@@ -1,7 +1,10 @@
 # Copyright (c) 2016, CodiLime Inc.
-FROM hortonworks/cloudbreak-uaa:3.6.0
+FROM cloudbreak-uaa-jdk8u252:latest
+#SHELL ["/bin/bash","-c"]
 
 ENV H2_VERSION 1.4.192
+
+#RUN ln -s /bin/bash /bin/dash -f && ln -s /bin/sh /bin/bash -f
 
 # build-essential gcc ruby-dev rubygems libssl-dev packages are needed by cf-uaac
 # get moreutils for sponge
